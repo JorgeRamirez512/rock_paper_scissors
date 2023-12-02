@@ -1,0 +1,16 @@
+UNDERSTANDING THE PROBLEM:
+getComputerChoice
+
+1. create the function getComputerChoice()
+
+2. function needs to return 3 strings: "rock", "paper", or "scissors. 
+
+3. Complete this by creating an array with these items. 
+choices = ["rock", "paper", "scissors"]
+
+4. Then use a method that will return one of these items randomly (search for a "random" method)
+
+
+PLAN:
+
+PSEUDOCODE: 
