@@ -1,16 +1,55 @@
 UNDERSTANDING THE PROBLEM:
-getComputerChoice
 
-1. create the function getComputerChoice()
+Write a function that plays a single round of rps
+The function should take two parameters 1. playerSelection 2. computerSelection
+Then then return a string that declares a winner of the round. example: "You lose! Paper beats rock
 
-2. function needs to return 3 strings: "rock", "paper", or "scissors. 
-
-3. Complete this by creating an array with these items. 
-choices = ["rock", "paper", "scissors"]
-
-4. Then use a method that will return one of these items randomly (search for a "random" method)
+* The playerSelection function should be case-insensitive
+* Account for ties by re-playing the round 
 
 
 PLAN:
+The overall goal is to create a function that plays the game of RPS.
+The function lets call if rockPaperScissors will have 2 parameters (playerSelection and computerSelection)
+playerSelection has not been created but computerSelection has
+
+sub problems:
+1. create the game function called playRound(playerSelection, computerSelection):
+*the parameters will set the game in play
+*input will come from the other funcions (playerSelection and computerSelection)
+*write the logic for rps (if and thens)
+*write the expected outputs
+
+2. create playerSelection input:
+*get input from user. users selects paper, rock, or scissors
+*make the input case-insensitive
+*return their choices
+
+
+ACTIONS:
+*I will start on the playerSelection function. 
 
 PSEUDOCODE: 
+*pseudocode for playerSelection function
+
+where is my input coming from? 
+it will come from the user.
+program will ask "rock, paper, or scissors?"
+
+is the input in the function or outside the function?
+use chatgpt or other tools to answer this question: I will keep it outside the function
+
+what will be done with this input?
+I will store it in a variable. The program needs to make the input case insensitive.
+make variable case insensitive.
+
+what will my output be?
+the output will be the users selection.
+return users choice 
+
+
+
+
+
+
+if the input isn't rock paper or scissors return "invalid"
