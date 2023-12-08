@@ -1,11 +1,24 @@
-let playerSelection = prompt("rock, paper, or scissor?").toLowerCase();
-let computerSelection = getComputerChoice();
+function getPlayerChoice() {
+    let validChoices = ["rock", "paper", "scissors"];
+    let playerChoice = prompt("rock, paper, or scissor?").toLowerCase();
+
+    while (!validChoices.includes(playerChoice)) {
+        alert("Invalid choice. Please enter rock, paper, or scissors.");
+        playerChoice = prompt("rock, paper, or scissor?").toLowerCase();
+    }
+
+    return playerChoice;
+}
+
+
 
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
     let randomItem = choices[Math.floor(Math.random() * choices.length)];
     return randomItem;
 }
+
+
 
 function playRound(playerSelection, computerSelection) {
     let win = "You win!";
@@ -25,10 +38,17 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "rock" && computerSelection == "paper") ||
         (playerSelection == "paper" && computerSelection == "scissors")
     ) {
-        return `${lose} Computer selected ${computerSelection}`;
-    } else if (!["rock", "paper", "scissors"].includes(playerSelection)) {
-        return "You selected an invalid choice";
+        return `${lose} ${computerSelection} beats ${playerSelection}`;
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = getPlayerChoice();
+        let computerSelection = getComputerChoice();
+        alert(playRound(playerSelection, computerSelection));
+    }
+}
+
+playGame();
+alert("Done")
