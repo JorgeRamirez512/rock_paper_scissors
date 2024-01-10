@@ -50,17 +50,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Function to play the game for a specified number of rounds
-function playGame() {
-    // Loop for 5 rounds
-    for (let i = 0; i < 5; i++) {
-        // Get player and computer choices
-        let playerSelection = getPlayerChoice();
-        let computerSelection = getComputerChoice();
-        // Display the result of the round
-        alert(playRound(playerSelection, computerSelection));
-    }
-}
+const rock = document.createElement('button')
+const paper = document.createElement('button')
+const scissors = document.createElement('button')
 
 // Call the function to play the game
 playGame();
