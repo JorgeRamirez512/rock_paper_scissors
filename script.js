@@ -50,9 +50,38 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const rock = document.createElement('button')
-const paper = document.createElement('button')
-const scissors = document.createElement('button')
+
+const rock = document.createElement('button');
+rock.textContent = 'Rock';
+
+const paper = document.createElement('button');
+paper.textContent = 'Paper';
+
+const scissors = document.createElement('button');
+scissors.textContent = 'Scissors';
+
+document.body.appendChild(rock);
+document.body.appendChild(paper);
+document.body.appendChild(scissors);
+
+// Event listener for the 'rock' button
+rock.addEventListener('click', function() {
+    // Call playRound with 'rock' as playerSelection and getComputerChoice() for computerSelection
+    console.log(playRound('rock', getComputerChoice()));
+});
+
+// Event listener for the 'paper' button
+paper.addEventListener('click', function() {
+    // Call playRound with 'paper' as playerSelection and getComputerChoice() for computerSelection
+    console.log(playRound('paper', getComputerChoice()));
+});
+
+// Event listener for the 'scissors' button
+scissors.addEventListener('click', function() {
+    // Call playRound with 'scissors' as playerSelection and getComputerChoice() for computerSelection
+    console.log(playRound('scissors', getComputerChoice()));
+});
+
 
 // Call the function to play the game
 playGame();
