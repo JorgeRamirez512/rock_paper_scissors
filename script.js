@@ -1,3 +1,33 @@
+// Create a container div for the game
+const div = document.createElement('div');
+document.body.appendChild(div);
+
+// Create a result display element 
+const resultDisplay = document.createElement('p')
+div.appendChild(resultDisplay);
+
+// Create button elements for rock, paper, and scissors
+const rock = document.createElement('button');
+rock.textContent = 'Rock';
+
+const paper = document.createElement('button');
+paper.textContent = 'Paper';
+
+const scissors = document.createElement('button');
+scissors.textContent = 'Scissors';
+
+// Append the buttons to the container div
+div.appendChild(rock);
+div.appendChild(paper);
+div.appendChild(scissors);
+
+
+// Variables for player and computer scores
+let playerScore = 0;
+let computerScore = 0; 
+let result;
+
+
 // Function to get the player's choice, ensuring it's valid
 function getPlayerChoice() {
     // Valid choices for the game
@@ -38,7 +68,8 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "paper" && computerSelection == "rock") ||
         (playerSelection == "scissors" && computerSelection == "paper")
     ) {
-        return `${win} ${playerSelection} beats ${computerSelection}`;
+        playerScore++;
+        result = `${win} ${playerSelection} beats ${computerSelection}`;
     } else if (playerSelection == computerSelection) {
         return tie;
     } else if (
@@ -46,37 +77,38 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "rock" && computerSelection == "paper") ||
         (playerSelection == "paper" && computerSelection == "scissors")
     ) {
-        return `${lose} ${computerSelection} beats ${playerSelection}`;
+        computerScore++
+        result =  `${lose} ${computerSelection} beats ${playerSelection}`;
     }
+
+    return result
 }
 
-// Create a container div for the game
-const div = document.createElement('div');
-document.body.appendChild(div);
-
-// Create a result display element 
-const resultDisplay = document.createElement('p')
-div.appendChild(resultDisplay);
-
-// Create button elements for rock, paper, and scissors
-const rock = document.createElement('button');
-rock.textContent = 'Rock';
-
-const paper = document.createElement('button');
-paper.textContent = 'Paper';
-
-const scissors = document.createElement('button');
-scissors.textContent = 'Scissors';
-
-// Append the buttons to the container div
-div.appendChild(rock);
-div.appendChild(paper);
-div.appendChild(scissors);
 
 
 // Function to display the result in the DOM
 function displayResult(result) {
-    resultDisplay.textContent = result
+    resultDisplay.textContent = `${result} | Player: ${playerScore} | Computer: ${computerScore}`;
+    checkwinner();
+}
+
+
+// Function to check for a winner
+function checkwinner() {
+    if (playerScore === 5) {
+        alert("Congradulations! You win the game!");
+        resetGame();
+    } else if (computerScore === 5) {
+        alert("Computer wins. Better luck next time!");
+        resetGame();
+    }
+}
+
+// Function to reset the game
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    resultDisplay.textContent = "Game reset. Click a button to play again.";
 }
 
 // Event listener for the 'rock' button
