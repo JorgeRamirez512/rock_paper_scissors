@@ -62,6 +62,11 @@ function playRound(playerSelection, computerSelection) {
     let lose = "You lose.";
     let tie = "Tie.";
 
+    // Capitalize the first letter of the player's choice
+    const formattedPlayerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+    // Capitalize the first letter of the computer's choice
+    const formattedComputerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+
     // Check conditions for each outcome and return the result
     if (
         (playerSelection == "rock" && computerSelection == "scissors") ||
@@ -69,7 +74,7 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "scissors" && computerSelection == "paper")
     ) {
         playerScore++;
-        result = `${win} ${playerSelection} beats ${computerSelection}`;
+        result = `${win} ${formattedPlayerSelection} beats ${computerSelection}`;
     } else if (playerSelection == computerSelection) {
         return tie;
     } else if (
@@ -78,7 +83,7 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "paper" && computerSelection == "scissors")
     ) {
         computerScore++
-        result =  `${lose} ${computerSelection} beats ${playerSelection}`;
+        result =  `${lose} ${formattedComputerSelection} beats ${playerSelection}`;
     }
 
     return result
