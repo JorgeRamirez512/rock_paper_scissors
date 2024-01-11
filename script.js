@@ -50,19 +50,27 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
+// Create a button element for rock
 const rock = document.createElement('button');
-rock.textContent = 'Rock';
+rock.textContent = 'Rock'; // Set the button's text content to 'Rock'
 
+// Create a button element for paper
 const paper = document.createElement('button');
-paper.textContent = 'Paper';
+paper.textContent = 'Paper'; // Set the button's text content to 'Paper'
 
+// Create a button element for scissors
 const scissors = document.createElement('button');
-scissors.textContent = 'Scissors';
+scissors.textContent = 'Scissors'; // Set the button's text content to 'Scissors'
 
+// Append the rock button to the body of the HTML document
 document.body.appendChild(rock);
+
+// Append the paper button to the body of the HTML document
 document.body.appendChild(paper);
+
+// Append the scissors button to the body of the HTML document
 document.body.appendChild(scissors);
+
 
 // Event listener for the 'rock' button
 rock.addEventListener('click', function() {
