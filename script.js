@@ -50,48 +50,58 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Create a button element for rock
+// Create a container div for the game
+const div = document.createElement('div');
+document.body.appendChild(div);
+
+// Create a result display element 
+const resultDisplay = document.createElement('p')
+div.appendChild(resultDisplay);
+
+// Create button elements for rock, paper, and scissors
 const rock = document.createElement('button');
-rock.textContent = 'Rock'; // Set the button's text content to 'Rock'
+rock.textContent = 'Rock';
 
-// Create a button element for paper
 const paper = document.createElement('button');
-paper.textContent = 'Paper'; // Set the button's text content to 'Paper'
+paper.textContent = 'Paper';
 
-// Create a button element for scissors
 const scissors = document.createElement('button');
-scissors.textContent = 'Scissors'; // Set the button's text content to 'Scissors'
+scissors.textContent = 'Scissors';
 
-// Append the rock button to the body of the HTML document
-document.body.appendChild(rock);
+// Append the buttons to the container div
+div.appendChild(rock);
+div.appendChild(paper);
+div.appendChild(scissors);
 
-// Append the paper button to the body of the HTML document
-document.body.appendChild(paper);
 
-// Append the scissors button to the body of the HTML document
-document.body.appendChild(scissors);
-
+// Function to display the result in the DOM
+function displayResult(result) {
+    resultDisplay.textContent = result
+}
 
 // Event listener for the 'rock' button
 rock.addEventListener('click', function() {
     // Call playRound with 'rock' as playerSelection and getComputerChoice() for computerSelection
-    console.log(playRound('rock', getComputerChoice()));
+    displayResult(playRound('rock', getComputerChoice()));
 });
 
 // Event listener for the 'paper' button
 paper.addEventListener('click', function() {
     // Call playRound with 'paper' as playerSelection and getComputerChoice() for computerSelection
-    console.log(playRound('paper', getComputerChoice()));
+    displayResult(playRound('paper', getComputerChoice()));
 });
 
 // Event listener for the 'scissors' button
 scissors.addEventListener('click', function() {
     // Call playRound with 'scissors' as playerSelection and getComputerChoice() for computerSelection
-    console.log(playRound('scissors', getComputerChoice()));
+    displayResult(playRound('scissors', getComputerChoice()));
 });
 
 
 // Call the function to play the game
-playGame();
+// Note: You need to implement playGame() or remove this line if not needed
+// playGame();
+
 // Display "Done" when the game is finished
-alert("Done");
+// Note: You may want to remove or adjust this alert based on your actual game flow
+// alert("Done");
