@@ -134,11 +134,3 @@ scissors.addEventListener('click', function() {
     displayResult(playRound('scissors', getComputerChoice()));
 });
 
-
-// Call the function to play the game
-// Note: You need to implement playGame() or remove this line if not needed
-// playGame();
-
-// Display "Done" when the game is finished
-// Note: You may want to remove or adjust this alert based on your actual game flow
-// alert("Done");
