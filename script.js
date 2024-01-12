@@ -10,7 +10,7 @@ div.appendChild(resultDisplay);
 const rock = document.createElement('button');
 const rockImg = document.createElement('img')
 // set the scr and alt attributes of the 'rock' svg image to the rock button
-rock.src = "/images/rock.png";
+rock.src = "rock.png";
 rockImg.alt = "Rock";
 
 // Set the SVG image as the content of the 'rock' button
@@ -21,7 +21,7 @@ rock.innerHTML = '<img src="/images/rock.png" alt="Rock">';
 const paper = document.createElement('button');
 const paperImg = document.createElement('img')
 // set the scr and alt attributes of the 'paper' svg image to the paper button
-paper.src = "/images/paperplane.png";
+paper.src = "paperplane.png";
 paper.alt = "Paper plane";
 // Set the SVG image as the content of the 'rock' button
 paper.innerHTML = '<img src="/images/paperplane.png" alt="Paper plane">';
@@ -31,7 +31,7 @@ paper.innerHTML = '<img src="/images/paperplane.png" alt="Paper plane">';
 const scissors = document.createElement('button');
 const scissorImg = document.createElement('img')
 // set the scr and alt attributes of the 'scissors' svg image to the paper button
-scissors.src = "/images/scissors.png";
+scissors.src = "scissors.png";
 scissors.alt = "scissors";
 // Set the SVG image as the content of the 'rock' button
 scissors.innerHTML = '<img src="/images/scissors.png" alt="scissors">';
