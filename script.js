@@ -13,8 +13,6 @@ const rockImg = document.createElement('img')
 rock.src = "/images/rock.png";
 rockImg.alt = "Rock";
 
-rockImg.style.width = "50px";  // Set the desired width
-rockImg.style.height = "50px"; // Set the desired height
 // Set the SVG image as the content of the 'rock' button
 rock.innerHTML = '<img src="/images/rock.png" alt="Rock">';
 
