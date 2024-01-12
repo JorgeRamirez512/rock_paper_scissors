@@ -14,7 +14,7 @@ rock.src = "rock.png";
 rockImg.alt = "Rock";
 
 // Set the SVG image as the content of the 'rock' button
-rock.innerHTML = '<img src="/images/rock.png" alt="Rock">';
+rock.innerHTML = '<img src="./images/rock.png" alt="Rock">';
 
 
 // Create button elements for paper
@@ -24,7 +24,7 @@ const paperImg = document.createElement('img')
 paper.src = "paperplane.png";
 paper.alt = "Paper plane";
 // Set the SVG image as the content of the 'rock' button
-paper.innerHTML = '<img src="/images/paperplane.png" alt="Paper plane">';
+paper.innerHTML = '<img src="./images/paperplane.png" alt="Paper plane">';
 
 
 // Create button elements for scissors
@@ -34,7 +34,7 @@ const scissorImg = document.createElement('img')
 scissors.src = "scissors.png";
 scissors.alt = "scissors";
 // Set the SVG image as the content of the 'rock' button
-scissors.innerHTML = '<img src="/images/scissors.png" alt="scissors">';
+scissors.innerHTML = '<img src="./images/scissors.png" alt="scissors">';
 
 
 // Append the buttons to the container div
