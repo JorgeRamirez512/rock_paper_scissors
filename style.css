@@ -13,8 +13,7 @@ div {
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 10px;
     font-family: 'Roboto Mono', monospace;
     margin: 10px;
     cursor: pointer;
@@ -27,8 +26,6 @@ button {
 
 button:hover {
     background: linear-gradient(to right, #00ff88, #0073ff);
-    font-family: 'Roboto Mono', monospace;
-    font-weight:600;
 }
 
 p {
@@ -37,3 +34,4 @@ p {
     margin-top: 20px;
     color: #e0d7d7;
 }
+
