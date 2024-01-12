@@ -15,7 +15,7 @@ div {
 button {
     padding: 5px 10px;
     font-family: 'Roboto Mono', monospace;
-    margin: 10px;
+    margin: 15px;
     cursor: pointer;
     background: linear-gradient(to bottom, #0073ff, #00ff88);
     color: #000;
